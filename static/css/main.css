@@ -18,33 +18,137 @@ img {
     height: auto;
 }
 
+/* MAIN SECTION*/
 .main_section{
+    font-family: 'Consolas';
     position: relative;
     display: flex;
     justify-content: center;
 }
 
+/* Title */
 .main_title{
     margin-top: 12vh;
     text-align: center;
+
     width: 50vh;
     height: 5vh;
+
     border-radius: 2vh;
     background-color: #3c125c;
 }
 
-.user_data_A{
-    margin-top: 2vh;
-    padding-bottom: 2vh;
+/* FORM*/
+.form-block{
+    font-family: 'Consolas';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 22vh;
 }
 
-.user_submit{
+/* User Data "Block"*/
+.user_data_A{
     margin-top: 3vh;
+    padding-top: 2vh;
+
+    text-align: center;
+    font-size: 4vh;
+
+    width: 80vh;
+    height: 10vh;
+
+    background-color: #3c125c;
+    border-radius: 2vh;
+}
+
+.user_data_B{
+    margin-top: 3vh;
+    padding-top: 2vh;
+
+    text-align: center;
+    font-size: 4vh;
+
+    width: 80vh;
+    height: 10vh;
+
+    background-color: #3c125c;
+    border-radius: 2vh;
+}
+
+/* User Data Input Style */
+.user_a_value_style, .user_b_value_style{
+    color: #352526;
+
+    font-family: 'Consolas';
+    font-size: 2.5vh;
+    color: white;
+
+    height: 6vh;
+    width: 40vh;
+
+    background-color: #3c125c;
+
+    padding: 2vh;
+    margin-bottom: 3vh;
+
+    border: 0.4vh solid #a474b5;
+    border-bottom: 0.4vh solid #a474b5;
+    border-radius: 1vh;
+}
+
+.user_a_value_style:focus{
+    outline: 0.1vh solid #a474b5;
+    caret-color: #a474b5;
+}
+
+.user_b_value_style:focus{
+    outline: 0.1vh solid #a474b5;
+    caret-color: #a474b5;
+}
+
+
+.user_data_B{
+    font-size: 4vh;
+}
+
+/* Button */
+.user_submit{
     text-align: center;
 }
 
-.result {
-    margin-top: 5vh;
+.btn_submit{
+    width: 17vh;
+    height: 3vh;
+
+    border: 0px solid transparent;
+    border-radius: 2vh;
+
+    cursor: pointer;
+
+    background-color: #a474b5;
+    color: #efe1f2;
+
+    font-size: 2vh;
+    font-family: 'Consolas';
+    transition: all 0.3s;
+}
+
+.btn_submit:hover{
+    background: #371d40;
+    color: #a474b5;
+}
+
+/* Result Block */
+
+.result-block{
+    font-family: 'Consolas';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 57vh;
 }
 
 .result_merge,
@@ -52,4 +156,18 @@ img {
 .result_difference,
 .result_symmetrical_difference {
     padding-bottom: 2vh;
+    font-size: 3.5vh;
+}
+
+.style-merge-a-b,
+.style-intersection-a-b,
+.style-difference-a-b,
+.style-symmetrical-difference-a-b{
+    padding-top:1.7vh;
+    text-align: center;
+
+    width: 150vh; /* изменено */
+    height: 7vh;
+    background-color: #3c125c;
+    border-radius: 2vh;
 }

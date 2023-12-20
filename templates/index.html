@@ -10,51 +10,56 @@
             <h1>Enter Sets</h1>
         </div>
 
-        <!-- Form With User Data and Submit Btn, like user input a/b -->
-        <form action="{{ url_for('index') }}" method="post">
+    </div>
+
+
+    <div class="form-block">
+         <!-- Form With User Data and Submit Btn, like user input a/b -->
+        <form action="{{ url_for('index') }}" method="post" class="get-res-form">
             {{ form.csrf_token }}
             <!-- Button -->
             <div class="user_submit">
-                {{form.user_submit_btn()}} <br>
+                {{form.user_submit_btn(class="btn_submit")}}
             </div>
 
             <!-- User data A -->
             <div class="user_data_A">
                 {{form.user_a_value.label}}
-                {{form.user_a_value(size=30)}}
+                {{form.user_a_value(size=40, autocomplete="off", class="user_a_value_style")}}
             </div>
 
             <!-- User data B -->
             <div class="user_data_B">
                 {{form.user_b_value.label}}
-                {{form.user_b_value(size=30)}}
+                {{form.user_b_value(size=40, autocomplete="off", class="user_b_value_style")}}
             </div>
         </form>
+    </div>
 
+    <div class="result-block">
         <!-- Result Block -->
         <div class="result">
             <!-- Result Merge -->
             <div class="result_merge">
-                <h5>A ⋃ B = {{ res_merge_a_b }}</h5>
+                <h5 class="style-merge-a-b">A ⋃ B = { {{ res_merge_a_b }} }</h5>
             </div>
 
             <!-- Result Intersection -->
             <div class="result_intersection">
-                <h5>A ⋂ B = {{ res_intersection_a_b }}</h5>
+                <h5 class="style-intersection-a-b">A ⋂ B = { {{ res_intersection_a_b }} }</h5>
             </div>
 
             <!-- Result Difference -->
             <div class="result_difference">
-                <h5>A \ B = {{ res_difference_a_b }}</h5>
+                <h5 class="style-difference-a-b">A \ B = { {{ res_difference_a_b }} }</h5>
             </div>
 
             <!-- Result Symmetrical Difference -->
             <div class="result_symmetrical_difference">
-                <h5>A △ B = {{ res_symm_diff_a_b }}</h5>
+                <h5 class="style-symmetrical-difference-a-b">A △ B = { {{ res_symm_diff_a_b }} }</h5>
             </div>
 
         </div>
-
     </div>
 
 </section>
