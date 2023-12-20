@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="main_section">
+
+    <div class="container">
+
+        <!-- Title -->
+        <div class="main_title">
+            <h1>Enter Sets</h1>
+        </div>
+
+        <!-- Form With User Data and Submit Btn, like user input a/b -->
+        <form action="" method="post">
+
+            <!-- Button -->
+            <div class="user_submit">
+                {{form.user_submit_btn()}} <br>
+            </div>
+
+            <!-- User data A -->
+            <div class="user_data_A">
+                {{form.user_a_value.label}}
+                {{form.user_a_value(size=30)}}
+            </div>
+
+            <!-- User data B -->
+            <div class="user_data_B">
+                {{form.user_b_value.label}}
+                {{form.user_b_value(size=30)}}
+            </div>
+        </form>
+
+        <!-- Result Block -->
+        <div class="result">
+            <!-- Result Merge -->
+            <div class="result_merge">
+                <h5>A ⋃ B = </h5>
+            </div>
+
+            <!-- Result Intersection -->
+            <div class="result_intersection">
+                <h5>A ⋂ B = </h5>
+            </div>
+
+            <!-- Result Difference -->
+            <div class="result_difference">
+                <h5>A \ B = </h5>
+            </div>
+
+            <!-- Result Symmetrical Difference -->
+            <div class="result_symmetrical_difference">
+                <h5>A △ B = </h5>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

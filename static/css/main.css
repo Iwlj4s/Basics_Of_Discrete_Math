@@ -1,0 +1,55 @@
+body{
+    font-family: 'Consolas';
+    font-size: 2.7vh;
+    background-color: #622194;
+    color:white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.main_section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.main_title{
+    margin-top: 12vh;
+    text-align: center;
+    width: 50vh;
+    height: 5vh;
+    border-radius: 2vh;
+    background-color: #3c125c;
+}
+
+.user_data_A{
+    margin-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.user_submit{
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.result {
+    margin-top: 5vh;
+}
+
+.result_merge,
+.result_intersection,
+.result_difference,
+.result_symmetrical_difference {
+    padding-bottom: 2vh;
+}
