@@ -11,8 +11,8 @@
         </div>
 
         <!-- Form With User Data and Submit Btn, like user input a/b -->
-        <form action="" method="post">
-
+        <form action="{{ url_for('index') }}" method="post">
+            {{ form.csrf_token }}
             <!-- Button -->
             <div class="user_submit">
                 {{form.user_submit_btn()}} <br>
@@ -35,22 +35,22 @@
         <div class="result">
             <!-- Result Merge -->
             <div class="result_merge">
-                <h5>A ⋃ B = </h5>
+                <h5>A ⋃ B = {{ res_merge_a_b }}</h5>
             </div>
 
             <!-- Result Intersection -->
             <div class="result_intersection">
-                <h5>A ⋂ B = </h5>
+                <h5>A ⋂ B = {{ res_intersection_a_b }}</h5>
             </div>
 
             <!-- Result Difference -->
             <div class="result_difference">
-                <h5>A \ B = </h5>
+                <h5>A \ B = {{ res_difference_a_b }}</h5>
             </div>
 
             <!-- Result Symmetrical Difference -->
             <div class="result_symmetrical_difference">
-                <h5>A △ B = </h5>
+                <h5>A △ B = {{ res_symm_diff_a_b }}</h5>
             </div>
 
         </div>
