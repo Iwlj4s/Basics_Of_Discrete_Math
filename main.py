@@ -41,10 +41,8 @@ def index():
                                        res_symm_diff_a_b=res_symm_diff_a_b)
 
             elif check_user_data:
-                "<h5> You should enter sets </h5>"
                 print("You should enter sets")
         else:
-            "<h5> You should enter digit </h5>"
             print("You should enter digit")
     return render_template('index.html', form=form)
 
