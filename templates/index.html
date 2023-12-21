@@ -4,16 +4,15 @@
 <section class="main_section">
 
     <div class="container">
-
         <!-- Title -->
         <div class="main_title">
             <h1>Enter Sets</h1>
         </div>
-
     </div>
 
-
+    <!-- Form Block -->
     <div class="form-block">
+
          <!-- Form With User Data and Submit Btn, like user input a/b -->
         <form action="{{ url_for('index') }}" method="post" class="get-res-form">
             {{ form.csrf_token }}
@@ -36,8 +35,9 @@
         </form>
     </div>
 
+    <!-- Result Block -->
     <div class="result-block">
-        <!-- Result Block -->
+
         <div class="result">
             <!-- Result Merge -->
             <div class="result_merge">
@@ -60,6 +60,58 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- Info about operations block-->
+    <div class="about-operations-block">
+
+           <!-- Button -->
+            <div class="button-about-operations">
+                <button class="btn-info" onclick="toggleInfo()">?</button>
+                <script src="static/js/main.js"></script>
+            </div>
+
+        <!-- Info about operations -->
+        <div class="info-about-operations">
+
+            <!-- Title -->
+            <div class="title-about-operations">
+                <h3 class="example-about-operations">A = { 1, 2, 3, 4 }</h3>
+                <h3 class="example-about-operations">B = { 3, 4, 5, 6 }</h3>
+            </div>
+
+            <!-- About Merge -->
+            <div class="main-info-about-operations">
+                <h3 class="operation-name">Merge</h3>
+                <p class="operation-info">Write the elements of the set A and B in ascending order; if an element occurs >1 time, write it once</p>
+                <p class="res-example">A ⋃ B = { 1, 2, 3, 4, 5, 6 }</p>
+            </div>
+
+            <!-- About Intersection -->
+            <div class="main-info-about-operations">
+                <h3 class="operation-name">Intersection</h3>
+                <p class="operation-info">Write out identical elements from A and B</p>
+                <p class="res-example">A ⋂ B = { 3, 4 }</p>
+            </div>
+
+            <!-- About Difference -->
+            <div class="main-info-about-operations">
+                <h3 class="operation-name">Difference</h3>
+                <p class="operation-info">A/B Rewrite A, removing elements that are in B</p>
+                <p class="operation-info">B/A Rewrite B, removing elements that are in A</p>
+                <p class="res-example">A \ B = { 1, 2}</p>
+                <p class="res-example">A \ B = { 5, 6}</p>
+            </div>
+
+            <!-- About Symmetrical Difference -->
+            <div class="main-info-about-operations">
+                <h3 class="operation-name">Symmetrical Difference</h3>
+                <p class="operation-info">Write out elements from A ⋃ B, removing elements from A ⋂ B</p>
+                <p class="res-example">A △ B = { 1, 2, 5, 6}</p>
+            </div>
+
+        </div>
+
     </div>
 
 </section>

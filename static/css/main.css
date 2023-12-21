@@ -18,12 +18,26 @@ img {
     height: auto;
 }
 
+/* SELECTION SETTINGS */
+::selection {
+background:  #a474b5; /* Safari */
+}
+
+::-moz-selection {
+background:  #a474b5; /* Firefox */
+}
+
+
+
 /* MAIN SECTION*/
 .main_section{
     font-family: 'Consolas';
     position: relative;
     display: flex;
     justify-content: center;
+    width:100%;
+
+    margin-top:2vh;
 }
 
 /* Title */
@@ -37,6 +51,7 @@ img {
     border-radius: 2vh;
     background-color: #3c125c;
 }
+
 
 /* FORM*/
 .form-block{
@@ -113,7 +128,7 @@ img {
     font-size: 4vh;
 }
 
-/* Button */
+/* User Submit Button */
 .user_submit{
     text-align: center;
 }
@@ -122,7 +137,7 @@ img {
     width: 17vh;
     height: 3vh;
 
-    border: 0px solid transparent;
+    border: 0.2vh solid white;
     border-radius: 2vh;
 
     cursor: pointer;
@@ -138,7 +153,9 @@ img {
 .btn_submit:hover{
     background: #371d40;
     color: #a474b5;
+    border: 0.2vh solid #a474b5;
 }
+
 
 /* Result Block */
 
@@ -166,8 +183,104 @@ img {
     padding-top:1.7vh;
     text-align: center;
 
-    width: 150vh; /* изменено */
+    width: 160vh;
     height: 7vh;
     background-color: #3c125c;
     border-radius: 2vh;
+}
+
+
+/* ABOUT OPERATIONS*/
+
+/* Get Info Button */
+.button-about-operations{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+     margin-right: 8vh;
+     margin-top: -1vh;
+}
+
+.btn-info {
+    position: absolute;
+
+    background-color: #a474b5;
+    color: white;
+
+    width: 3vh;
+    height: 2.8vh;
+
+    font-size: 2.2vh;
+    font-weight: 600;
+
+    border-radius:10vh;
+    border: 0.2vh solid white;
+    cursor: pointer;
+}
+
+.btn-info:hover{
+    background: #371d40;
+    color: #a474b5;
+    border: 0.2vh solid #a474b5;
+}
+
+/* Block with Info */
+.info-about-operations{
+    font-family: 'Consolas';
+    position: absolute;
+
+    justify-content: center;
+
+    width: 52vh;
+    height: 53vh;
+
+    background-color:#3c125c;
+
+    margin-left:20vh;
+    margin-top: 2.5vh;
+
+    border-radius: 2vh;
+    padding: 2vh;
+
+    display: none;
+
+}
+
+
+/* Title */
+.title-about-operations{
+    width: 45vh;
+}
+
+/* Example */
+.example-about-operations{
+    font-size: 1.5vh;
+    font-weight: 600;
+}
+
+/* Main Info */
+.main-info-about-operations{
+    padding-top: 1vh;
+
+}
+
+/* Operation name */
+.operation-name{
+    font-size: 2vh;
+}
+
+/* Info about operation */
+.operation-info{
+    padding-top: 1vh;
+    font-size: 1.4vh;
+}
+
+/* Operation Result Example*/
+.res-example{
+    font-size: 1.5vh;
+    font-weight: 600;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
