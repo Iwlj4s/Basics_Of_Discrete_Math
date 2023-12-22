@@ -9,6 +9,6 @@ def merge_a_b(a, b):
         if b[j] not in res_a_merge_b:
             res_a_merge_b.append(b[j])
 
-        res_a_merge_b.sort(key=int)
+    res_a_merge_b.sort(key=int)
 
     return res_a_merge_b

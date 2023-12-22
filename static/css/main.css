@@ -1,6 +1,7 @@
 body{
     font-family: 'Consolas';
     font-size: 2.7vh;
+
     background-color: #622194;
     color:white;
 }
@@ -32,9 +33,12 @@ background:  #a474b5; /* Firefox */
 /* MAIN SECTION*/
 .main_section{
     font-family: 'Consolas';
+
     position: relative;
+
     display: flex;
     justify-content: center;
+
     width:100%;
 
     margin-top:2vh;
@@ -42,7 +46,7 @@ background:  #a474b5; /* Firefox */
 
 /* Title */
 .main_title{
-    margin-top: 12vh;
+    margin-top: 11vh;
     text-align: center;
 
     width: 50vh;
@@ -57,43 +61,38 @@ background:  #a474b5; /* Firefox */
 .form-block{
     font-family: 'Consolas';
     position: absolute;
+
     display: flex;
     justify-content: center;
 
-    margin-top: 22vh;
+    margin-top: 19vh;
 }
 
-/* User Data "Block"*/
-.user_data_A{
-    margin-top: 3vh;
-    padding-top: 2vh;
+/* User Data */
 
-    text-align: center;
-    font-size: 4vh;
-
-    width: 80vh;
-    height: 10vh;
-
-    background-color: #3c125c;
-    border-radius: 2vh;
+.user-data-content{
+    margin-top: 5vh;
 }
 
+.user_data_A,
 .user_data_B{
-    margin-top: 3vh;
-    padding-top: 2vh;
+    margin-top: 1.2vh;
+    padding-top: 1.5vh;
 
     text-align: center;
     font-size: 4vh;
 
     width: 80vh;
-    height: 10vh;
+    height: 9vh;
 
     background-color: #3c125c;
     border-radius: 2vh;
 }
+
 
 /* User Data Input Style */
-.user_a_value_style, .user_b_value_style{
+.user_a_value_style,
+.user_b_value_style{
     color: #352526;
 
     font-family: 'Consolas';
@@ -123,14 +122,10 @@ background:  #a474b5; /* Firefox */
     caret-color: #a474b5;
 }
 
-
-.user_data_B{
-    font-size: 4vh;
-}
-
 /* User Submit Button */
 .user_submit{
     text-align: center;
+    margin-top: 4vh;
 }
 
 .btn_submit{
@@ -143,7 +138,7 @@ background:  #a474b5; /* Firefox */
     cursor: pointer;
 
     background-color: #a474b5;
-    color: #efe1f2;
+    color: white;
 
     font-size: 2vh;
     font-family: 'Consolas';
@@ -157,12 +152,26 @@ background:  #a474b5; /* Firefox */
 }
 
 
+}
+
+.get_additional{
+    width: 5vh;
+    height: 2vh;
+
+    border: 5vh;
+
+    background-color: #a474b5;
+}
+
+
 /* Result Block */
 
 .result-block{
     font-family: 'Consolas';
+
     position: absolute;
     display: flex;
+
     justify-content: center;
 
     margin-top: 57vh;
@@ -171,20 +180,21 @@ background:  #a474b5; /* Firefox */
 .result_merge,
 .result_intersection,
 .result_difference,
-.result_symmetrical_difference {
+.result_symmetrical_difference{
     padding-bottom: 2vh;
-    font-size: 3.5vh;
+    font-size: 3.4vh;
 }
 
 .style-merge-a-b,
 .style-intersection-a-b,
 .style-difference-a-b,
 .style-symmetrical-difference-a-b{
-    padding-top:1.7vh;
+    padding-top:1.2vh;
     text-align: center;
 
     width: 160vh;
-    height: 7vh;
+    height: 6vh;
+
     background-color: #3c125c;
     border-radius: 2vh;
 }
@@ -216,6 +226,7 @@ background:  #a474b5; /* Firefox */
 
     border-radius:10vh;
     border: 0.2vh solid white;
+
     cursor: pointer;
 }
 
