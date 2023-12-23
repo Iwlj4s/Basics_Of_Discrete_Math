@@ -13,7 +13,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = KEY
 
 
+# ----  HOME PAGE ---- #
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def index():
     form = SetsForm()
 
@@ -44,6 +46,12 @@ def index():
             form.user_b_value.data = "You should enter digit"
 
     return render_template('index.html', form=form)
+
+
+# ----  COMPLEMENT PAGE ---- #
+@app.route('/complement', methods=['GET', 'POST'])
+def complement():
+    return render_template('complement.html')
 
 
 if __name__ == '__main__':

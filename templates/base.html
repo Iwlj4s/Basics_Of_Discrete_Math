@@ -7,8 +7,26 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <title>Operations On Sets</title>
 </head>
+
 <body>
-{% block body %}
-{% endblock %}
+    <header class="header">
+        <div class="container">
+
+            <div class="header-top">
+                <div class="header-top-logo">
+                    <div class="header-top-title">
+                        Sets Stuff
+                    </div>
+                </div>
+
+            <nav class="nav">
+                <a href="{{ url_for('index') }}" class="nav-link">Main Operations</a>
+                <a href="{{ url_for('complement') }}" class="nav-link">Complement</a>
+            </nav>
+
+            </div>
+        </div>
+</header>
+    {% block body %}{% endblock %}
 </body>
 </html>
