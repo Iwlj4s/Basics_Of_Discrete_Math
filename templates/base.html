@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css' )}}">
-    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/info.css' rel='stylesheet'>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <title>Operations On Sets</title>
+    {% block head %}
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static',  filename='css/main.css' )}}">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/info.css' rel='stylesheet'>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        <title>Operations On Sets</title>
+    {% endblock %}
 </head>
 
 <body>
@@ -13,10 +15,9 @@
         <div class="container">
 
             <div class="header-top">
+
                 <div class="header-top-logo">
-                    <div class="header-top-title">
-                        Sets Stuff
-                    </div>
+                    <div class="header-top-title"> Sets Stuff </div>
                 </div>
 
             <nav class="nav">
@@ -26,7 +27,17 @@
 
             </div>
         </div>
-</header>
+    </header>
+    <div class="about-operations-block">
+        <!-- Info Button -->
+        <div class="button-about-operations">
+            <button class="btn-info" onclick="toggleInfo()">?</button>
+        </div>
+
+        {% block info %} {% endblock %}
+
+    </div>
+
     {% block body %}{% endblock %}
 </body>
 </html>

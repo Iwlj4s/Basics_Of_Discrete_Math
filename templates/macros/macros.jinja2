@@ -1,0 +1,13 @@
+{# INDEX.html get operations info #}
+
+{% macro index_op(operation_name, operation_info, operation_info2, res_example, res_example2) -%}
+    <h3 class="operation-name">{{ operation_name }}</h3>
+    <p class="operation-info">{{ operation_info }}</p>
+    <p class="res-example">{{ res_example }}</p>
+
+    {% if operation_info2 and res_example2 %}
+        <p class="operation-info">{{ operation_info2 }}</p>
+        <p class="res-example">{{ res_example2 }}</p>
+    {% endif %}
+
+{%- endmacro %}

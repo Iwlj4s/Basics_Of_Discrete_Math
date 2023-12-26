@@ -1,8 +1,38 @@
 {% extends 'base.html' %}
 
+{% from "macros/macros.jinja2" import index_op %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
 {% block body %}
 <section class="main_section">
 
+    <!-- Info about operations block-->
+    {% block info%}
+
+        <!-- Info about operations -->
+        <div class="info-about-operations">
+
+            <!-- Title -->
+            <div class="title-about-operations">
+                <h3 class="example-about-operations">{{ index_data.example_about_operation1 }}</h3>
+                <h3 class="example-about-operations">{{ index_data.example_about_operation2 }}</h3>
+            </div>
+
+            <!-- About Operations -->
+            <div class="main-info-about-operations">
+                {% for operation in index_data.operations -%}
+                    {{ index_op(**operation) }}
+                {% endfor -%}
+            </div>
+
+        </div>
+    {% endblock %}
+
+
+    <!-- Main Content-->
     <div class="container">
         <!-- Title -->
         <div class="main_title">
@@ -28,13 +58,13 @@
                     <!-- User data A -->
                     <div class="user_data_A">
                         {{form.user_a_value.label}}
-                        {{form.user_a_value(size=40, autocomplete="off", class="user_a_value_style")}}
+                        { {{form.user_a_value(size=40, autocomplete="off", class="user_a_value_style")}} }
                     </div>
 
                     <!-- User data B -->
                     <div class="user_data_B">
                         {{form.user_b_value.label}}
-                        {{form.user_b_value(size=40, autocomplete="off", class="user_b_value_style")}}
+                        { {{form.user_b_value(size=40, autocomplete="off", class="user_b_value_style")}} }
                     </div>
 
             </div>
@@ -68,57 +98,6 @@
         </div>
     </div>
 
-    <!-- Info about operations block-->
-    <div class="about-operations-block">
-
-           <!-- Button -->
-            <div class="button-about-operations">
-                <button class="btn-info" onclick="toggleInfo()">?</button>
-                <script src="static/js/main.js"></script>
-            </div>
-
-        <!-- Info about operations -->
-        <div class="info-about-operations">
-
-            <!-- Title -->
-            <div class="title-about-operations">
-                <h3 class="example-about-operations">A = { 1, 2, 3, 4 }</h3>
-                <h3 class="example-about-operations">B = { 3, 4, 5, 6 }</h3>
-            </div>
-
-            <!-- About Merge -->
-            <div class="main-info-about-operations">
-                <h3 class="operation-name">Merge</h3>
-                <p class="operation-info">Write the elements of the set A and B in ascending order; if an element occurs >1 time, write it once</p>
-                <p class="res-example">A ⋃ B = { 1, 2, 3, 4, 5, 6 }</p>
-            </div>
-
-            <!-- About Intersection -->
-            <div class="main-info-about-operations">
-                <h3 class="operation-name">Intersection</h3>
-                <p class="operation-info">Write out identical elements from A and B</p>
-                <p class="res-example">A ⋂ B = { 3, 4 }</p>
-            </div>
-
-            <!-- About Difference -->
-            <div class="main-info-about-operations">
-                <h3 class="operation-name">Difference</h3>
-                <p class="operation-info">A/B Rewrite A, removing elements that are in B</p>
-                <p class="operation-info">B/A Rewrite B, removing elements that are in A</p>
-                <p class="res-example">A \ B = { 1, 2}</p>
-                <p class="res-example">B \ A = { 5, 6}</p>
-            </div>
-
-            <!-- About Symmetrical Difference -->
-            <div class="main-info-about-operations">
-                <h3 class="operation-name">Symmetrical Difference</h3>
-                <p class="operation-info">Write out elements from A ⋃ B, removing elements from A ⋂ B</p>
-                <p class="res-example">A △ B = { 1, 2, 5, 6}</p>
-            </div>
-
-        </div>
-
-    </div>
 
 </section>
 {% endblock %}

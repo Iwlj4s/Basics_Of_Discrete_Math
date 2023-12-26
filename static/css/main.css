@@ -34,6 +34,8 @@ background:  #a474b5; /* Firefox */
 .header{
     background-color:  #3c125c;
     height: 6vh;
+
+    margin-bottom: 4vh;
 }
 
 .header-top{
@@ -98,12 +100,11 @@ background:  #a474b5; /* Firefox */
 
     width:100%;
 
-    margin-top:2vh;
 }
 
 /* Title */
 .main_title{
-    margin-top: 11vh;
+    margin-top: 10vh;
     text-align: center;
 
     width: 50vh;
@@ -122,7 +123,7 @@ background:  #a474b5; /* Firefox */
     display: flex;
     justify-content: center;
 
-    margin-top: 19vh;
+    margin-top: 18vh;
 }
 
 /* User Data */
@@ -231,7 +232,7 @@ background:  #a474b5; /* Firefox */
 
     justify-content: center;
 
-    margin-top: 57vh;
+    margin-top: 56vh;
 }
 
 .result_merge,
@@ -259,6 +260,10 @@ background:  #a474b5; /* Firefox */
 
 /* ABOUT OPERATIONS*/
 
+.about-operations-block{
+
+}
+
 /* Get Info Button */
 
 .button-about-operations{
@@ -266,8 +271,8 @@ background:  #a474b5; /* Firefox */
     top: 0;
     right: 0;
 
-     margin-right: 8vh;
-     margin-top: -1vh;
+     margin-right: 10vh;
+     margin-top: 7.5vh;
 }
 
 .btn-info {
@@ -296,18 +301,19 @@ background:  #a474b5; /* Firefox */
 
 /* Block with Info */
 .info-about-operations{
-    font-family: 'Consolas';
     position: absolute;
+    top: 0;
+    right: 0;
 
-    justify-content: center;
+    margin-right: 5vh;
+    margin-top: 12vh;
+
+    font-family: 'Consolas';
 
     width: 52vh;
     height: 53vh;
 
     background-color:#3c125c;
-
-    margin-left:20vh;
-    margin-top: 2.5vh;
 
     border-radius: 2vh;
     padding: 2vh;
@@ -342,6 +348,7 @@ background:  #a474b5; /* Firefox */
 /* Info about operation */
 .operation-info{
     padding-top: 1vh;
+    padding-bottom: 0.34vh;
     font-size: 1.4vh;
 }
 
@@ -350,6 +357,6 @@ background:  #a474b5; /* Firefox */
     font-size: 1.5vh;
     font-weight: 600;
 
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 0.3vh;
+    padding-bottom: 2vh;
 }
