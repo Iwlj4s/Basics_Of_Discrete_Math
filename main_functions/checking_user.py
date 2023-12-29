@@ -8,8 +8,8 @@ def check_user_data(a, b):
 
 # CHECK USER ENTER DIGIT #
 def check_user_digit(a, b):
-    a_digit = all(digit_a.isdigit() for digit_a in a)
-    b_digit = all(digit_b.isdigit() for digit_b in b)
+    a_digit = all(digit_a.replace('-', '').isnumeric() for digit_a in a.split())
+    b_digit = all(digit_b.replace('-', '').isnumeric() for digit_b in b.split())
 
     if a_digit == True and b_digit == True:
         return True
