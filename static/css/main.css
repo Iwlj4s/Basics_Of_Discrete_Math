@@ -19,13 +19,29 @@ img {
     height: auto;
 }
 
+/* SCROLL BAR SETTINGS FOR CHROME/EDGE/SAFARI */
+body::-webkit-scrollbar {
+    width: 1.2vh;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #3c125c;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #a474b5;
+    border-radius: 20px;
+    border: 0.1vh solid white;
+  }
+
+
 /* SELECTION SETTINGS */
 ::selection {
-background:  #a474b5; /* Safari */
+background:  #a474b5;
 }
 
 ::-moz-selection {
-background:  #a474b5; /* Firefox */
+background:  #a474b5;
 }
 
 
@@ -49,7 +65,7 @@ background:  #a474b5; /* Firefox */
 
 /* Header Logo */
 .header-top-logo{
-    margin-right: 100vh;
+    margin-right: 90vh;
     display: flex;
 }
 
@@ -99,6 +115,7 @@ background:  #a474b5; /* Firefox */
     justify-content: center;
 
     width:100%;
+    height: 90vh;
 
 }
 
@@ -360,3 +377,77 @@ background:  #a474b5; /* Firefox */
     padding-top: 0.3vh;
     padding-bottom: 2vh;
 }
+
+/* COMPLEMENT PAGE */
+
+
+/* -------------- */
+
+/* FOOTER */
+
+/* Main settings */
+
+.footer{
+
+    background-color: #3c125c;
+    position:absolute;
+    width:100%;
+}
+
+
+.footer-container{
+    width: 100%;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+}
+
+/* Icon's settings*/
+.social-icons{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-icons a{
+    padding-bottom: 0.3vh;
+    padding-right: 0.5vh;
+    padding-left: 0.5vh;
+    margin: 15vh;
+    align-items: center;
+
+    background-color: #a474b5;
+
+    border: 0.2vh solid white;
+    border-radius: 1.5vh;
+}
+
+.social-icons a i{
+   font-size: 2vh;
+   color: white;
+   padding-bottom: 0.3vh;
+}
+
+.social-icons a:hover{
+    background-color: #3c125c;
+    border:0.2vh solid #a474b5;
+}
+
+.social-icons i:hover{
+    color: #a474b5;
+}
+
+.social-icon-subtitle{
+    padding-top: 1.7vh;
+    font-size: 1.7vh;
+}
+
+
+.footer-bottom{
+    color: white;
+    text-align: center;
+    font-size: 1.5vh;
+    padding-top:1vh;
+
+}
+
+

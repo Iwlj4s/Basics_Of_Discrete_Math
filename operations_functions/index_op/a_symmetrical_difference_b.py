@@ -1,6 +1,6 @@
-from operations_functions.a_merge_b import merge_a_b
+from operations_functions.index_op.a_merge_b import merge_a_b
 
-from operations_functions.a_intersection_b import intersection_a_b
+from operations_functions.index_op.a_intersection_b import intersection_a_b
 
 
 def symmetrical_difference_a_b(a, b):

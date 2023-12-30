@@ -1,3 +1,4 @@
+# Data For Index.html #
 index_data = {
     'example_about_operation1': 'A = { 1, 2, 3, 4 }',
     'example_about_operation2': 'B = { 3, 4, 5, 6 }',
@@ -28,4 +29,14 @@ index_data = {
     ]
 }
 
-
+# Data For Complement.html #
+complement_data ={
+    'example_about_operation1': 'U = {1, 2, 3, 4, 5, 6, 7, 8, 9} ',
+    'example_about_operation2': 'X =  {1, 2, 3, 4}',
+    'operations': [
+        {
+            'operation_name': 'Complement',
+            'operation_info': 'Write the elements of the set U by removing elements from set X',
+            'res_example': 'X′ = { 1, 2, 3, 4, 5, 6 }'
+        }]
+}

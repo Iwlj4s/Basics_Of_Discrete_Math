@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title %} Main Operations On Sets {% endblock %}
 {% from "macros/macros.jinja2" import index_op %}
 
 {% block head %}
@@ -45,11 +45,11 @@
 
          <!-- Form With User Data and Submit Btn, like user input a/b -->
         <form action="{{ url_for('index') }}" method="post" class="get-res-form">
-            {{ form.csrf_token }}
+            {{ index_form.csrf_token }}
 
             <!-- User Submit Button -->
             <div class="user_submit">
-                {{form.user_submit_btn(class="btn_submit")}}
+                {{index_form.user_submit_btn(class="btn_submit")}}
 
             </div>
 
@@ -57,14 +57,14 @@
 
                     <!-- User data A -->
                     <div class="user_data_A">
-                        {{form.user_a_value.label}}
-                        { {{form.user_a_value(size=40, autocomplete="off", class="user_a_value_style")}} }
+                        {{index_form.user_a_value.label}}
+                        { {{index_form.user_a_value(size=40, autocomplete="off", class="user_a_value_style")}} }
                     </div>
 
                     <!-- User data B -->
                     <div class="user_data_B">
-                        {{form.user_b_value.label}}
-                        { {{form.user_b_value(size=40, autocomplete="off", class="user_b_value_style")}} }
+                        {{index_form.user_b_value.label}}
+                        { {{index_form.user_b_value(size=40, autocomplete="off", class="user_b_value_style")}} }
                     </div>
 
             </div>
