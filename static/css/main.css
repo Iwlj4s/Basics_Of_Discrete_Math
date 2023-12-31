@@ -255,7 +255,8 @@ background:  #a474b5;
 .result_merge,
 .result_intersection,
 .result_difference,
-.result_symmetrical_difference{
+.result_symmetrical_difference,
+.result_complement{
     padding-bottom: 2vh;
     font-size: 3.4vh;
 }
@@ -263,7 +264,8 @@ background:  #a474b5;
 .style-merge-a-b,
 .style-intersection-a-b,
 .style-difference-a-b,
-.style-symmetrical-difference-a-b{
+.style-symmetrical-difference-a-b,
+.style-complement-u-x{
     padding-top:1.2vh;
     text-align: center;
 
@@ -288,8 +290,8 @@ background:  #a474b5;
     top: 0;
     right: 0;
 
-     margin-right: 10vh;
-     margin-top: 7.5vh;
+    margin-right: 12vh;
+    margin-top: -2vh;
 }
 
 .btn-info {
@@ -323,12 +325,12 @@ background:  #a474b5;
     right: 0;
 
     margin-right: 5vh;
-    margin-top: 12vh;
+    margin-top: 1.5vh;
 
     font-family: 'Consolas';
 
     width: 52vh;
-    height: 53vh;
+    height: fit-content;
 
     background-color:#3c125c;
 
@@ -375,13 +377,8 @@ background:  #a474b5;
     font-weight: 600;
 
     padding-top: 0.3vh;
-    padding-bottom: 2vh;
+    padding-bottom: 1.6vh;
 }
-
-/* COMPLEMENT PAGE */
-
-
-/* -------------- */
 
 /* FOOTER */
 

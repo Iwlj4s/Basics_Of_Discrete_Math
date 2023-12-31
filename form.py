@@ -13,8 +13,7 @@ class SetsForm(FlaskForm):
 
 
 class ComplementForm(FlaskForm):
-    user_U_value = StringField('U = ')
-
     user_a_value = StringField('X = ')
+    user_U_value = StringField('U = ')
 
     user_submit_btn = SubmitField('Get Res')

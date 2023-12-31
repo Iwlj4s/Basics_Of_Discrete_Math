@@ -30,13 +30,13 @@ index_data = {
 }
 
 # Data For Complement.html #
-complement_data ={
+complement_data = {
     'example_about_operation1': 'U = {1, 2, 3, 4, 5, 6, 7, 8, 9} ',
     'example_about_operation2': 'X =  {1, 2, 3, 4}',
     'operations': [
         {
             'operation_name': 'Complement',
-            'operation_info': 'Write the elements of the set U by removing elements from set X',
-            'res_example': 'X′ = { 1, 2, 3, 4, 5, 6 }'
+            'operation_info': 'Write the elements of the set U by removing elements from set X   ( X can be A′ or B′ )',
+            'res_example': 'X′ = { 5, 6, 7, 8, 9}'
         }]
 }

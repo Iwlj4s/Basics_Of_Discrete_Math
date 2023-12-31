@@ -11,3 +11,12 @@
     {% endif %}
 
 {%- endmacro %}
+
+
+{# COMPLEMENT.html get operations info #}
+{% macro complement_op(operation_name, operation_info, res_example) -%}
+    <h3 class="operation-name">{{ operation_name }}</h3>
+    <p class="operation-info">{{ operation_info }}</p>
+    <p class="res-example">{{ res_example }}</p>
+
+{%- endmacro %}

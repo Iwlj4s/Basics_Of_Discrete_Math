@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
-from form import SetsForm
-from main_functions.get_res import get_index_result
+from form import SetsForm, ComplementForm
+from main_functions.get_res import get_index_result, get_complement_result
 from main_functions.checking_user import check_user_data, check_user_digit
-from data import index_data
+from data import index_data, complement_data
 
 import os
 from dotenv import load_dotenv
@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = KEY
 
 
-# ----  HOME PAGE ---- #
+# ----  Main "SETS" PAGE ---- #
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def index():
@@ -59,7 +59,41 @@ def index():
 # ----  COMPLEMENT PAGE ---- #
 @app.route('/complement', methods=['GET', 'POST'])
 def complement():
-    return render_template('complement.html')
+    complement_form = ComplementForm()
+
+    if request.method == 'POST' and complement_form.validate_on_submit():
+        # Init Check Functions #
+
+        # Check user enter is not nothing
+        check_user_enter = check_user_data(a=complement_form.user_a_value.data, b=complement_form.user_U_value.data)
+
+        # Replace , and spaces for check user entry digit
+        check_user_enter_digit = check_user_digit(a=complement_form.user_a_value.data.replace(',', '').replace(' ', ''),
+                                                  b=complement_form.user_U_value.data.replace(',', '').replace(' ', ''))
+        # Checks #
+        if check_user_enter_digit:
+            if not check_user_enter:
+                # If user Input digit
+                a = complement_form.user_a_value.data.replace(',', '').split()  # Get User Input Value
+                u = complement_form.user_U_value.data.replace(',', '').split()
+
+                # Get Result
+                res_complement = get_complement_result(a=a, u=u)
+
+                return render_template('complement.html', complement_form=complement_form,  # Return Res Data
+                                       res_complement=res_complement,
+                                       complement_data=complement_data)
+
+            elif check_user_data:  # If User Input without anything
+                complement_form.user_a_value.data = "You should enter sets"
+                complement_form.user_U_value.data = "You should enter sets"
+
+        else:  # If User input string
+            complement_form.user_a_value.data = "You should enter digit"
+            complement_form.user_U_value.data = "You should enter digit"
+
+    return render_template('complement.html', complement_form=complement_form,
+                           complement_data=complement_data)
 
 
 if __name__ == '__main__':
