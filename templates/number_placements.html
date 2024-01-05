@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %} Calculating the number of placements of n by k elements {% endblock %}
+
+{% from "macros/macros.jinja2" import placements_op %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block body %}
+
+ <!-- Info about operations block-->
+    {% block info%}
+
+        <!-- Info about operations -->
+        <div class="info-about-operations">
+
+            <!-- Title -->
+            <div class="title-about-operations">
+                <h3 class="example-about-operations">{{ placements_op.example_about_operation1 }}</h3>
+            </div>
+
+            <!-- About Operations -->
+            <div class="main-info-about-operations">
+                {% for operation in find_number_placements_data.operations -%}
+                    {{ placements_op(**operation) }}
+                {% endfor -%}
+            </div>
+
+        </div>
+    {% endblock %}
+
+    <!-- Main Content-->
+    <div class="container">
+        <!-- Title -->
+        <div class="main_title">
+            <h1 class="text_center">Enter n and k</h1>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-block">
+
+         <!-- Form With User Data and Submit Btn, like user input a/b -->
+        <form action="{{ url_for('number_placements') }}" method="post" class="get-res-form">
+            {{ placements_form.csrf_token }}
+
+            <!-- User Submit Button -->
+            <div class="user_submit">
+                {{placements_form.user_submit_btn(class="btn_submit")}}
+
+            </div>
+
+            <div class="user-data-content">
+                <!-- User data n-->
+                <div class="user_data_A">
+                    {{placements_form.user_n_value.label}}
+                    { {{placements_form.user_n_value(size=40, autocomplete="off", class="user_a_value_style")}} }
+                </div>
+
+                <!-- User data k-->
+                <div class="user_data_A">
+                    {{placements_form.user_k_value.label}}
+                    { {{placements_form.user_k_value(size=40, autocomplete="off", class="user_a_value_style")}} }
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Result Block -->
+    <div class="result-block">
+
+        <div class="result">
+
+            <!-- Result Placements -->
+            <div class="result_complement">
+                <h5 class="style-complement-u-x">A_n^k = { {{ res_placements }} }</h5>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

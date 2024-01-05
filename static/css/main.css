@@ -52,6 +52,8 @@ background:  #a474b5;
     height: 6vh;
 
     margin-bottom: 4vh;
+
+    font-size: 2vh;
 }
 
 .header-top{
@@ -59,31 +61,36 @@ background:  #a474b5;
 
     display: flex;
     align-items: center;
-
-    justify-content: center;
+    justify-content: right;
 }
 
 /* Header Logo */
 .header-top-logo{
-    margin-right: 90vh;
     display: flex;
-}
+    position: absolute;
+    left: 0;
+    margin-left: 3vh;
+    }
 
 .header-top-title{
     font-size: 3vh;
     font-weight: 800;
 
-    padding-left: 3vh;
+    margin-right: 42vh;
 }
 
 /* Nav Link */
 .nav-link{
     position: relative;
     color: white;
+
+    padding-top: 0.5vh;
     margin-right: 3vh;
 
     font-weight: 700;
     display: inline-flex;
+
+    text-align: right;
 }
 
 .nav-link::after {
@@ -92,14 +99,14 @@ background:  #a474b5;
     display: inline-flex;
     height: 0.05vw;
     background-color: #a474b5;
-    top: 3.2vh;
+    top: 3vh;
   }
 
 
 .nav-link:hover:after{
     position: absolute;
     width: 100%;
-    height: 0.3vh;
+    height: 0.31vh;
 }
 
 

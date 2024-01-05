@@ -15,3 +15,23 @@ class ComplementForm(FlaskForm):
     user_U_value = StringField('U = ')
 
     user_submit_btn = SubmitField('Get Res')
+
+
+class FindNumberPermutationForm(FlaskForm):
+    user_n_value = StringField('n = ')
+
+    user_submit_btn = SubmitField('Get Res')
+
+
+class FindNumberPlacementsForm(FlaskForm):
+    user_n_value = StringField('n = ')
+    user_k_value = StringField('k = ')
+
+    user_submit_btn = SubmitField('Get Res')
+
+
+class FindNumberCombinationsForm(FlaskForm):
+    user_n_value = StringField('n = ')
+    user_k_value = StringField('k = ')
+
+    user_submit_btn = SubmitField('Get Res')

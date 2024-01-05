@@ -20,3 +20,29 @@
     <p class="res-example">{{ res_example }}</p>
 
 {%- endmacro %}
+
+
+{# NUMBER_PERMUTATIONS.html get operations info #}
+{% macro permutations_op(operation_name, operation_info, res_example) -%}
+    <h3 class="operation-name">{{ operation_name }}</h3>
+    <p class="operation-info">{{ operation_info }}</p>
+    <p class="res-example">{{ res_example }}</p>
+
+{%- endmacro %}
+
+
+{# NUMBER_PLACEMENTS.html get operations info #}
+{% macro placements_op(operation_name, operation_info, res_example) -%}
+    <h3 class="operation-name">{{ operation_name }}</h3>
+    <p class="operation-info">{{ operation_info }}</p>
+    <p class="res-example">{{ res_example }}</p>
+
+{%- endmacro %}
+
+{# NUMBER_COMBINATIONS.html get operations info #}
+{% macro combinations_op(operation_name, operation_info, res_example) -%}
+    <h3 class="operation-name">{{ operation_name }}</h3>
+    <p class="operation-info">{{ operation_info }}</p>
+    <p class="res-example">{{ res_example }}</p>
+
+{%- endmacro %}
