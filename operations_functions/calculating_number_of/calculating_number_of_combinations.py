@@ -4,7 +4,7 @@ from math import factorial
 def combinations(n, k):
     res_combinations = []
     a = factorial(n)
-    b = factorial(n - k)
+    b = factorial((n - k))
     z = b * factorial(k)
 
     C = a / z

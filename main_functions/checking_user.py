@@ -48,9 +48,45 @@ def check_user_digit_for_one_number(x):
 
 # CHECK FOR N > K #
 def check_user_n_k(n, k):
-    if n > k or n == k:
+    try:
+
+        if int(n[0]) >= int(k[0]):
+            return True
+
+        else:
+            return False
+
+    except IndexError:
+        return False
+
+
+# Check Number of Numbers for two numbers #
+def check_number_of_numbers(x, y):
+    if len(x) == 1 and len(y) == 1:
         return True
 
     else:
         return False
 
+
+# IF ENTER IS ONE NUMBER #
+def check_user_n_k_for_one_number(n, k):
+    try:
+
+        if int(n[0]) >= int(k[0]):
+            return True
+
+        else:
+            return False
+
+    except IndexError:
+        return False
+
+
+# Check Number of Numbers for two numbers #
+def check_number_of_numbers_for_one_number(x, y):
+    if len(x) == 1:
+        return True
+
+    else:
+        return False
