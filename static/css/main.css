@@ -8,6 +8,13 @@ body{
     overflow-x:hidden;
 }
 
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -82,6 +89,11 @@ background:  #a474b5;
 }
 
 /* Nav Link */
+
+.nav{
+    margin-right: 7vh;
+}
+
 .nav-link{
     position: relative;
     color: white;
@@ -111,6 +123,93 @@ background:  #a474b5;
     height: 0.31vh;
 }
 
+/* Side Bar*/
+
+.burger{
+    cursor: pointer;
+
+    background-color: #a474b5;
+
+    padding-top: 0.2vh;
+    padding-left: 0.3vh;
+    padding-right: 0.3vh;
+
+    border: 0.2vh solid white;
+    border-radius: 1vh;
+
+
+}
+
+.burger:hover{
+    background-color: #371d40;
+
+    border: 0.2vh solid #a474b5;
+
+}
+
+#burger_svg:hover{
+
+    fill: #a474b5;
+}
+
+.side_bar{
+    column-count: 2;
+    column-gap: 20px;
+    position: absolute;
+
+    margin-top: 5vh;
+
+    top: 0;
+    right: 0;
+
+    height: 20vh;
+    width: 100%;
+
+    z-index: 999;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(60 18 92 / 22%);
+    border: 1vh solid rgba(60 18 92 / 87%);
+    border-radius: 2vh;
+
+    display: none;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.side_bar li{
+    padding-bottom: 1.5vh;
+
+    padding-top: 1vh;
+    padding-left: 0.8vh;
+
+}
+
+@media(max-width: 1920px){
+    .burger{
+
+        display: none;
+    }
+
+}
+
+
+@media(max-width: 1100px){
+    .burger{
+
+        display: flex;
+    }
+    .hide_on_mobile{
+
+        display: none;
+    }
+
+}
 
 
 
@@ -138,6 +237,11 @@ background:  #a474b5;
 
     border-radius: 2vh;
     background-color: #3c125c;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 
@@ -353,7 +457,7 @@ background:  #a474b5;
 
 /* Title */
 .title-about-operations{
-    width: 45vh;
+    width: 26vh;
 }
 
 /* Example */
@@ -396,8 +500,8 @@ background:  #a474b5;
 .footer{
 
     background-color: #3c125c;
-    position:absolute;
-    width:100%;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -457,3 +561,333 @@ background:  #a474b5;
 }
 
 
+/* ADAPTATION */
+
+
+/* 1200 PX  */
+
+@media only screen and (max-width: 1200px) {
+
+    /* HEADER */
+    .header{
+        font-size: 1.8vh;
+    }
+
+    .header-top{
+        padding-top: 1.6vh;
+    }
+
+    .header-top-title{
+        font-size: 2.1vh;
+    }
+
+    .nav{
+        margin-right: 5vh;
+        font-size: 1.5vh;
+    }
+
+    .nav-link{
+        margin-right: 3.2vh;
+    }
+
+    .nav-link::after {
+        position: absolute;
+        content: '';
+        display: inline-flex;
+        height: 1vw;
+        background-color: #a474b5;
+        top: 2.5vh;
+    }
+
+
+    .nav-link:hover:after{
+        position: absolute;
+        width: 100%;
+        height: 0.3vh;
+    }
+
+    /* MAIN SECTION */
+
+    /* About Operations*/
+    .info-about-operations {
+        width: 38vh;
+        margin-right: 3.3vh;
+    }
+
+    .example-about-operations {
+        font-size: 1.4vh;
+    }
+
+    .main-info-about-operations {
+        padding-top: 0.5vh;
+    }
+
+    .operation-name {
+        font-size: 1.8vh;
+    }
+
+    .operation-info {
+        padding-top: 0.2vh;
+        padding-bottom: 0vh;
+        font-size: 1.4vh;
+    }
+
+    .res-example {
+        font-size: 1.4vh;
+        font-weight: 600;
+        padding-top: 0.3vh;
+        padding-bottom: 1.3vh;
+    }
+
+    /* Title */
+
+    .main_title {
+        width: 35vh;
+        font-size: 2.3vh;
+    }
+
+    /* Form Block */
+    .user_data_A, .user_data_B {
+        width: 60vh;
+        height: 8vh;
+
+        font-size: 2.7vh;
+
+        padding-top: 1.2vh;
+    }
+
+    .user_a_value_style, .user_b_value_style {
+        font-size: 2.2vh;
+        height: 5.5vh;
+    }
+
+
+    /* Result Block */
+    .style-merge-a-b, .style-intersection-a-b,
+    .style-difference-a-b,
+    .style-symmetrical-difference-a-b,
+    .style-complement-u-x {
+        padding-top: 1.5vh;
+        width: 125vh;
+    }
+
+
+    .result_merge,
+    .result_intersection,
+    .result_difference,
+    .result_symmetrical_difference,
+    .result_complement {
+        font-size: 2.8vh;
+
+    }
+
+    /* FOOTER */
+
+}
+
+
+
+/* 992 PX  */
+
+@media only screen and (max-width: 992px) {
+    /* HEADER */
+    .header-top{
+        padding-top: 1.8vh;
+    }
+
+    .header-top-title{
+        font-size: 1.8vh;
+    }
+
+    .nav{
+        margin-right: 2.3vh;
+        font-size: 1.5vh;
+    }
+
+    .nav-link{
+        margin-right: 1.2vh;
+    }
+
+    .nav-link::after {
+        top: 2.5vh;
+    }
+
+
+    .nav-link:hover:after{
+        height: 0.2vh;
+    }
+
+
+    /* MAIN SECTION */
+
+    /* About Operations*/
+    .info-about-operations {
+        width: 28vh;
+    }
+
+    .example-about-operations {
+        font-size: 1.3vh;
+    }
+
+    .operation-name {
+        font-size: 1.5vh;
+    }
+
+    .operation-info {
+        font-size: 1.2vh;
+    }
+
+    /* Title */
+
+    .main_title {
+        width: 30vh;
+        font-size: 2vh;
+    }
+
+    /* Form Block */
+    .user_data_A, .user_data_B {
+        width: 54vh;
+        height: 7vh;
+        font-size: 2.5vh;
+        padding-top: 1.2vh;
+    }
+
+    .user_a_value_style, .user_b_value_style {
+        font-size: 2.1vh;
+
+        height: 3vh;
+        width: 35vh;
+    }
+
+
+    /* Result Block */
+    .style-merge-a-b, .style-intersection-a-b,
+    .style-difference-a-b,
+    .style-symmetrical-difference-a-b,
+    .style-complement-u-x {
+        padding-top: 1.5vh;
+        width: 110vh;
+    }
+
+
+    .result_merge,
+    .result_intersection,
+    .result_difference,
+    .result_symmetrical_difference,
+    .result_complement {
+        font-size: 2.8vh;
+
+    }
+
+}
+
+
+
+/* 768 PX  */
+
+@media only screen and (max-width: 768px) {
+   /* HEADER */
+    .header-top{
+        padding-top: 1.8vh;
+    }
+
+    .header-top-title{
+        font-size: 1.8vh;
+    }
+
+    .nav{
+        margin-right: 2.3vh;
+        font-size: 1.5vh;
+    }
+
+    .nav-link{
+        margin-right: 1.2vh;
+    }
+
+    .nav-link::after {
+        top: 2.5vh;
+    }
+
+
+    .nav-link:hover:after{
+        height: 0.2vh;
+    }
+
+
+    /* MAIN SECTION */
+
+    /* About Operations*/
+    .info-about-operations {
+        width: 28vh;
+    }
+
+    .example-about-operations {
+        font-size: 1.3vh;
+    }
+
+    .operation-name {
+        font-size: 1.5vh;
+    }
+
+    .operation-info {
+        font-size: 1.2vh;
+    }
+
+    /* Title */
+
+    .main_title {
+        width: 30vh;
+        font-size: 2vh;
+    }
+
+    /* Form Block */
+    .user_data_A, .user_data_B {
+        width: 54vh;
+        height: 7vh;
+        font-size: 2.5vh;
+        padding-top: 1.2vh;
+    }
+
+    .user_a_value_style, .user_b_value_style {
+        font-size: 2.1vh;
+
+        height: 3vh;
+        width: 35vh;
+    }
+
+
+    /* Result Block */
+    .style-merge-a-b, .style-intersection-a-b,
+    .style-difference-a-b,
+    .style-symmetrical-difference-a-b,
+    .style-complement-u-x {
+        padding-top: 1.5vh;
+        width: 110vh;
+    }
+
+
+    .result_merge,
+    .result_intersection,
+    .result_difference,
+    .result_symmetrical_difference,
+    .result_complement {
+        font-size: 2.8vh;
+
+    }
+}
+
+
+/* 480 PX  */
+
+@media only screen and (max-width: 480px) {
+
+
+}
+
+
+/* 320 PX  */
+
+@media only screen and (max-width: 320px) {
+
+
+}
