@@ -818,7 +818,7 @@ background:  #a474b5;
 
     /* About Operations*/
     .info-about-operations {
-        width: 28vh;
+        width: 19vh;
     }
 
     .example-about-operations {
@@ -830,19 +830,24 @@ background:  #a474b5;
     }
 
     .operation-info {
+        font-size: 1.1vh;
+    }
+
+    .res-example{
         font-size: 1.2vh;
     }
 
     /* Title */
 
     .main_title {
-        width: 30vh;
+        width: 27vh;
         font-size: 2vh;
     }
 
     /* Form Block */
+
     .user_data_A, .user_data_B {
-        width: 54vh;
+        width: 47vh;
         height: 7vh;
         font-size: 2.5vh;
         padding-top: 1.2vh;
@@ -852,17 +857,27 @@ background:  #a474b5;
         font-size: 2.1vh;
 
         height: 3vh;
-        width: 35vh;
+        width: 30vh;
+    }
+
+    .btn_submit{
+        width: 12vh;
     }
 
 
     /* Result Block */
+
+    .result-block{
+        margin-top: 57vh;
+    }
+
     .style-merge-a-b, .style-intersection-a-b,
     .style-difference-a-b,
     .style-symmetrical-difference-a-b,
     .style-complement-u-x {
-        padding-top: 1.5vh;
-        width: 110vh;
+        padding-top: 1.14vh;
+        width: 63vh;
+        height: 5vh;
     }
 
 
@@ -871,7 +886,7 @@ background:  #a474b5;
     .result_difference,
     .result_symmetrical_difference,
     .result_complement {
-        font-size: 2.8vh;
+        font-size: 2.36vh;
 
     }
 }
