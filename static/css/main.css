@@ -199,7 +199,7 @@ background:  #a474b5;
 }
 
 
-@media(max-width: 1100px){
+@media(max-width: 990px){
     .burger{
 
         display: flex;
@@ -817,24 +817,8 @@ background:  #a474b5;
     /* MAIN SECTION */
 
     /* About Operations*/
-    .info-about-operations {
-        width: 19vh;
-    }
-
-    .example-about-operations {
-        font-size: 1.3vh;
-    }
-
-    .operation-name {
-        font-size: 1.5vh;
-    }
-
-    .operation-info {
-        font-size: 1.1vh;
-    }
-
-    .res-example{
-        font-size: 1.2vh;
+    .about-operations-block{
+        display: none;
     }
 
     /* Title */
@@ -893,16 +877,108 @@ background:  #a474b5;
 
 
 /* 480 PX  */
-
 @media only screen and (max-width: 480px) {
+   /* HEADER */
+    .header{
+        width: 100%;
+    }
+
+    .header-top{
+        padding-top: 2.8vh;
+    }
+
+    .header-top-title{
+        font-size: 1.4vh;
+    }
+    .burger{
+        display: flex;
+        position: absolute;
+    }
+    .nav{
+        margin-right: 2.3vh;
+        font-size: 1.5vh;
+    }
+
+    .nav-link{
+        margin-right: 1.2vh;
+    }
+
+    .nav-link::after {
+        top: 2.5vh;
+    }
 
 
-}
+    .nav-link:hover:after{
+        height: 0.2vh;
+    }
 
 
-/* 320 PX  */
+    /* MAIN SECTION */
 
-@media only screen and (max-width: 320px) {
+    .main_section{
+        height: 98vh;
+    }
 
+
+    /* Title */
+
+    .main_title {
+        width: 27vh;
+        font-size: 2vh;
+    }
+
+    /* Form Block */
+
+    .user_data_A, .user_data_B {
+        width: 37vh;
+        height: 7vh;
+        font-size: 1.99vh;
+        padding-top: 1.2vh;
+    }
+
+    .user_a_value_style, .user_b_value_style {
+        font-size: 1.7vh;
+        height: 3vh;
+        width: 22vh;
+    }
+
+    .btn_submit{
+        width: 12vh;
+    }
+
+
+    /* Result Block */
+
+    .result-block{
+        margin-top: 57vh;
+    }
+
+    .style-merge-a-b, .style-intersection-a-b,
+    .style-difference-a-b,
+    .style-symmetrical-difference-a-b,
+    .style-complement-u-x {
+        padding-top: 1.4vh;
+        width: max-content;
+        height: 5vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
+
+
+    .result_merge,
+    .result_intersection,
+    .result_difference,
+    .result_symmetrical_difference,
+    .result_complement {
+        font-size: 1.99vh;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    /* Footer */
+    .footer{
+        width: 100%;
+    }
 
 }
