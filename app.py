@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 
-import getKey
 from form import SetsForm, ComplementForm, FindNumberPermutationForm
 from form import FindNumberPlacementsForm, FindNumberCombinationsForm
 
