@@ -31,5 +31,3 @@ def create_key():
 
 
 key = ''.join(create_key())
-
-print(key)
