@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+import getKey
 from form import SetsForm, ComplementForm, FindNumberPermutationForm
 from form import FindNumberPlacementsForm, FindNumberCombinationsForm
 
@@ -8,14 +9,12 @@ from main_functions.get_all_main_results import full_checked_results
 from data import index_data, complement_data, find_number_permutation_data
 from data import find_number_placements_data, find_number_combinations_data
 
-import os
-from dotenv import load_dotenv
+from getKey import create_key
 
-load_dotenv()
-KEY = os.getenv("KEY")
+key = ''.join(create_key())
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = KEY
+app.config['SECRET_KEY'] = key
 
 
 # ----  Main "SETS" PAGE ---- #
@@ -132,4 +131,4 @@ def number_combinations():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
